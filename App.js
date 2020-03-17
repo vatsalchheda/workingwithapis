@@ -1,29 +1,12 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Form from "./views/Form";
+import PatientSignUp from "./views/PatientSignUp.js";
 
 class App extends Component {
-  state = {
-    fields: {}
-  };
-
-  onChange = updatedValue => {
-    this.setState({
-      fields: {
-        ...this.state.fields,
-        ...updatedValue
-      }
-    });
-  };
-
   render() {
     return (
       <div className="App">
-        <Form onChange={fields => this.onChange(fields)} />
-        <p>
-          {JSON.stringify(this.state.fields, null, 2)}
-        </p>
+        <PatientSignUp />
       </div>
     );
   }
